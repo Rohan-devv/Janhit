@@ -85,5 +85,5 @@ Server: Create a .env file in the Server directory and add your MongoDB URI and 
 If you'd like to contribute to this project, feel free to fork the repository, create a feature branch, and submit a pull request.
 
 ## Contact
-- Rachit Jain: rachitjainjaipur@gmail.com
-- Om Shukla: omshukla2403@gmail.com
+- Rohan Pal: rohan49421@gmail.com
+
