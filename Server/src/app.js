@@ -4,13 +4,18 @@ import cookieParser from "cookie-parser";
 
 const app = express();
 
-const allowedOrigins = [
-  "http://localhost:5174",
-  "http://janhit-flame.vercel.app"
-];
+
+
+const allowedOrigins = process.env.CORS.split(',');
 
 app.use(cors({
-  origin: process.env.CORS,
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true
 }));
 
