@@ -1,89 +1,302 @@
-# Janhit
+# 🏛️ Janhit - Civic Engagement Platform
 
-## Overview
-This is a MERN stack-based Civic Engagement Portal that allows local residents to report civic issues, vote on them, and track their resolution. It uses a map-based interface for real-time issue tracking, allowing users to easily raise and resolve local problems.
+> **Empowering Communities Through Digital Democracy**
 
-### Problem Statement:
-In many communities, residents struggle to report civic issues like potholes, broken streetlights, or garbage dumps due to the lack of a centralized, transparent platform. Often, these problems go unnoticed by authorities or unresolved for long periods, causing frustration among citizens and inefficiencies in local governance. There is a need for a system that allows easy reporting, prioritization based on public input, and accountability in issue resolution.
-
-### Features:
-- **Map-based reporting**: Users can drop pins on the map to report problems.
-- **Voting system**: Other users can can give severity rating on reported problems to prioritize them. If severity is greater than  or equal to 3 then vote is count of that problem
-- **Issue management**: Municipality and government officials can view and resolve reported problems.
-- **Comment and rating system**: Users can add comments, and track their status.
-
-
-
-
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-blue?style=for-the-badge&logo=vercel)](https://janhit-flame.vercel.app/)
+[![Tech Stack](https://img.shields.io/badge/Tech%20Stack-MERN%20Stack-orange?style=for-the-badge&logo=javascript)](https://janhit-flame.vercel.app/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 ---
 
-### Preview Image:
-![image](https://github.com/user-attachments/assets/c76bc122-98c4-4adf-9502-d47b2ee9e2b3)
-![image](https://github.com/user-attachments/assets/2369af92-03aa-4c2b-9574-96d1a662fdf8)
-![image](https://github.com/user-attachments/assets/fa27ddcd-0081-42f3-87b6-d2a924cd4e83)
-![image](https://github.com/user-attachments/assets/be75a3d2-7060-40a0-9356-400a89583cdd)
-![image](https://github.com/user-attachments/assets/bffd4cd4-d8e3-4efb-a6a4-57fd35022875)
+## 🌟 Overview
 
+**Janhit** is a revolutionary civic engagement platform that bridges the gap between citizens and local government. Built with cutting-edge technology, it provides a seamless way for residents to report, track, and resolve community issues while enabling officials to manage and prioritize problems efficiently.
 
----
-
-## Technologies Used
-- **Frontend**: React, TypeScript, Leaflet (for maps)
-- **Backend**: Node.js, Express
-- **Database**: MongoDB
-- **Authentication**: JWT Token-based Authentication
-- **API**: RESTful API routes
+### 🎯 Mission
+Transform local governance by creating a transparent, accountable, and participatory system where every citizen's voice matters.
 
 ---
 
-## Installation & Setup
+## ✨ Key Features
 
-### Prerequisites:
-- Node.js
-- MongoDB (or MongoDB Atlas)
-- npm or yarn
+### 🗺️ **Interactive Map-Based Reporting**
+- **Pin-drop functionality** for precise issue location
+- **Real-time geolocation** integration
+- **Visual problem mapping** with categorized markers
+- **Distance-based sorting** for local relevance
 
-### 1. Clone the repository:
-```bash
-git clone https://github.com/Rachit-31/Janhit.git
+### 🗳️ **Democratic Voting System**
+- **Severity-based voting** (1-5 scale)
+- **Community-driven prioritization**
+- **Automatic vote counting** for issues with severity ≥3
+- **Transparent rating system**
+
+### 👥 **Dual User Interface**
+- **Citizen Dashboard**: Report issues, track progress, vote on problems
+- **Official Dashboard**: Manage assignments, update status, resolve issues
+- **Role-based access control** with JWT authentication
+
+### 💬 **Social Engagement**
+- **Comment system** for community discussion
+- **Real-time updates** on issue status
+- **User interaction** and feedback loops
+- **Issue categorization** (Road, Sewage, Garbage, etc.)
+
+### 📊 **Advanced Analytics**
+- **Issue tracking** with status updates
+- **Vote analytics** and community sentiment
+- **Geographic problem clustering**
+- **Performance metrics** for officials
+
+---
+
+## 🛠️ Technology Stack
+
+### Frontend
+- **React 18** with TypeScript for type safety
+- **Leaflet.js** for interactive mapping
+- **Tailwind CSS** for modern, responsive design
+- **React Router** for seamless navigation
+- **Axios** for API communication
+- **React Hot Toast** for user notifications
+
+### Backend
+- **Node.js** with Express.js framework
+- **MongoDB** with Mongoose ODM
+- **JWT Authentication** for secure access
+- **RESTful API** architecture
+- **Geospatial indexing** for location-based queries
+
+### DevOps & Deployment
+- **Vercel** for frontend hosting
+- **Environment-based configuration**
+- **CORS-enabled** for cross-origin requests
+- **Production-ready** deployment setup
+
+---
+
+## 🚀 Live Demo
+
+**Experience Janhit in action:** [https://janhit-flame.vercel.app/](https://janhit-flame.vercel.app/)
+
+---
+
+## 📱 Screenshots
+
+### 🏠 Homepage
+![Homepage](https://github.com/user-attachments/assets/c76bc122-98c4-4adf-9502-d47b2ee9e2b3)
+
+### 🗺️ Interactive Map
+![Interactive Map](https://github.com/user-attachments/assets/2369af92-03aa-4c2b-9574-96d1a662fdf8)
+
+### 👤 User Dashboard
+![User Dashboard](https://github.com/user-attachments/assets/fa27ddcd-0081-42f3-87b6-d2a924cd4e83)
+
+### 🏛️ Official Dashboard
+![Official Dashboard](https://github.com/user-attachments/assets/be75a3d2-7060-40a0-9356-400a89583cdd)
+
+### 📊 Issue Management
+![Issue Management](https://github.com/user-attachments/assets/bffd4cd4-d8e3-4efb-a6a4-57fd35022875)
+
+---
+
+## 🏗️ Architecture
 
 ```
-### 2. Install dependencies
-1. Backend
-   ```bash
-   cd Server
-   npm install
-   ```
-2. Frontend
-   ```bash
-   cd Client
-   npm install
-   ```
-### 3. Configuration
-Server: Create a .env file in the Server directory and add your MongoDB URI and any necessary environment variables.
-**Sample env file:**
-- MONGODB_URI=
-- ACCESS_TOKEN_SECRET=
-- REFRESH_TOKEN_SECRET=
-- ACCESS_TOKEN_EXPIRY=
-- REFRESH_TOKEN_EXPIRY=
-- CORS=*
-- PORT=8000
+Janhit/
+├── Client/                 # React Frontend
+│   ├── src/
+│   │   ├── components/    # Reusable UI components
+│   │   ├── pages/        # Route components
+│   │   ├── assets/       # Static assets
+│   │   └── ApiUri.ts     # API configuration
+│   └── public/           # Public assets
+├── Server/                # Node.js Backend
+│   ├── src/
+│   │   ├── controllers/  # Business logic
+│   │   ├── models/       # MongoDB schemas
+│   │   ├── routes/       # API endpoints
+│   │   ├── middlewares/  # Authentication & validation
+│   │   └── db/          # Database connection
+│   └── package.json
+└── README.md
+```
 
-### 4. Run the project
-1. Backend
-   ```bash
-   cd Server
-   npm run dev
-   ```
-2. Frontend
-   ```bash
-   cd Client
-   npm run dev
-## Contributing
-If you'd like to contribute to this project, feel free to fork the repository, create a feature branch, and submit a pull request.
+---
 
-## Contact
-- Rohan Pal: rohan49421@gmail.com
+## 🚀 Quick Start
+
+### Prerequisites
+- **Node.js** (v16 or higher)
+- **MongoDB** (local or Atlas)
+- **npm** or **yarn**
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/Rachit-31/Janhit.git
+cd Janhit
+```
+
+### 2. Backend Setup
+```bash
+cd Server
+npm install
+```
+
+Create `.env` file:
+```env
+MONGODB_URI=your_mongodb_connection_string
+ACCESS_TOKEN_SECRET=your_jwt_secret
+REFRESH_TOKEN_SECRET=your_refresh_secret
+ACCESS_TOKEN_EXPIRY=15m
+REFRESH_TOKEN_EXPIRY=7d
+CORS=*
+PORT=8000
+```
+
+### 3. Frontend Setup
+```bash
+cd Client
+npm install
+```
+
+### 4. Start Development Servers
+
+**Backend:**
+```bash
+cd Server
+npm run dev
+```
+
+**Frontend:**
+```bash
+cd Client
+npm run dev
+```
+
+Visit `http://localhost:5173` to see the application!
+
+---
+
+## 🔧 API Endpoints
+
+### Authentication
+- `POST /api/auth/register` - User registration
+- `POST /api/auth/login` - User login
+- `POST /api/auth/logout` - User logout
+
+### Issues
+- `GET /api/problems` - Get all issues
+- `POST /api/problems` - Create new issue
+- `PUT /api/problems/:id` - Update issue
+- `DELETE /api/problems/:id` - Delete issue
+
+### Voting & Comments
+- `POST /api/votes` - Vote on issue
+- `POST /api/comments` - Add comment
+- `GET /api/comments/:problemId` - Get comments
+
+### Officials
+- `GET /api/officials` - Get officials
+- `PUT /api/officials/assign` - Assign issue to official
+
+---
+
+## 🎯 Problem Statement
+
+### The Challenge
+Local communities face significant challenges in civic issue reporting:
+- **Lack of centralized platforms** for issue reporting
+- **Poor transparency** in issue resolution
+- **No community involvement** in prioritization
+- **Inefficient communication** between citizens and officials
+- **Limited accountability** in local governance
+
+### Our Solution
+Janhit addresses these challenges by providing:
+- **Centralized reporting system** with map integration
+- **Transparent tracking** of issue resolution
+- **Community-driven prioritization** through voting
+- **Direct communication** between citizens and officials
+- **Accountability mechanisms** for local governance
+
+---
+
+## 🌟 Key Benefits
+
+### For Citizens
+- **Easy reporting** with map-based interface
+- **Real-time tracking** of issue status
+- **Community participation** through voting
+- **Transparent governance** with public updates
+
+### For Officials
+- **Efficient issue management** dashboard
+- **Priority-based assignment** system
+- **Performance tracking** and analytics
+- **Streamlined communication** with citizens
+
+### For Communities
+- **Improved local infrastructure** through better reporting
+- **Increased civic engagement** and participation
+- **Data-driven decision making** for local governance
+- **Enhanced transparency** in public services
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Please follow these steps:
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/AmazingFeature`)
+3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
+4. **Push** to the branch (`git push origin feature/AmazingFeature`)
+5. **Open** a Pull Request
+
+### Development Guidelines
+- Follow **TypeScript** best practices
+- Maintain **consistent code style**
+- Write **comprehensive tests**
+- Update **documentation** for new features
+
+---
+
+## 📞 Contact
+
+**Project Lead:** Rohan Pal  
+**Email:** rohan49421@gmail.com
+
+**Team Members:**
+- Rohan Pal - Full Stack Developer
+- Rachit - Backend Developer
+- Additional team members
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- **React Team** for the amazing frontend framework
+- **Leaflet.js** for interactive mapping capabilities
+- **MongoDB** for robust data storage
+- **Vercel** for seamless deployment
+- **Open Source Community** for inspiration and support
+
+---
+
+<div align="center">
+
+**Made with ❤️ for better communities**
+
+[![GitHub stars](https://img.shields.io/github/stars/Rachit-31/Janhit?style=social)](https://github.com/Rachit-31/Janhit)
+[![GitHub forks](https://img.shields.io/github/forks/Rachit-31/Janhit?style=social)](https://github.com/Rachit-31/Janhit)
+[![GitHub issues](https://img.shields.io/github/issues/Rachit-31/Janhit)](https://github.com/Rachit-31/Janhit/issues)
+
+</div>
 
