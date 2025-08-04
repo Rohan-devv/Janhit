@@ -79,6 +79,16 @@ Transform local governance by creating a transparent, accountable, and participa
 
 **Experience Janhit in action:** [https://janhit-flame.vercel.app/](https://janhit-flame.vercel.app/)
 
+### 🔑 Demo Credentials
+**Test the application with these demo credentials:**
+
+| Role | Email | Password |
+|------|-------|----------|
+| Citizen | `random@gmail.com` | `12345` |
+| Official | `random@gmail.com` | `12345` |
+
+> **Note:** Use the same credentials for both citizen and official roles to explore different features of the platform.
+
 ---
 
 ## 📱 Screenshots
