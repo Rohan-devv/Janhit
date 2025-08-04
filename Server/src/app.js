@@ -6,7 +6,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5174",
-  "https://janhit.vercel.app"
+  "http://janhit-flame.vercel.app"
 ];
 
 app.use(cors({
